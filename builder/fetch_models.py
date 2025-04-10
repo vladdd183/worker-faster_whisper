@@ -2,11 +2,11 @@ from concurrent.futures import ThreadPoolExecutor
 from faster_whisper import WhisperModel
 from huggingface_hub import snapshot_download
 
-repo_id = "efficient-speech/lite-whisper-large-v3-turbo-fast"
-local_dir = "lite"
-snapshot_download(repo_id=repo_id, local_dir=local_dir, repo_type="model")
+# repo_id = "efficient-speech/lite-whisper-large-v3-turbo-fast"
+# local_dir = "lite"
+# snapshot_download(repo_id=repo_id, local_dir=local_dir, repo_type="model")
 
-model_names = ["tiny", "base", "small", "medium", "large-v1", "large-v2", "large-v3"]
+model_names = ["efficient-speech/lite-whisper-large-v3-turbo-fast", "turbo"]
 
 
 def load_model(selected_model):
